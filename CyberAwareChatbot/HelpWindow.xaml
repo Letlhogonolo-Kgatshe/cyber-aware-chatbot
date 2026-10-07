@@ -1,0 +1,62 @@
+﻿<Window x:Class="CyberAwareChatbot.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Help Menu" Height="400" Width="600"
+        WindowStartupLocation="CenterOwner"
+        Foreground="{DynamicResource ForegroundBrush}"
+        Background="{DynamicResource BackgroundBrush}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <TextBlock Foreground="{DynamicResource ForegroundBrush}" TextWrapping="Wrap">
+                <Run FontWeight="Bold" FontSize="16">Cyber Aware Chatbot Help Menu</Run>
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Chat Functionality:</Run>
+                <LineBreak/>
+                - Type messages in the input box and click "Send" to interact with the chatbot.
+                - Ask about cybersecurity topics (e.g., phishing, passwords) to get tips.
+                - Type "exit" to close the application (confirm with "yes").
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Task Management:</Run>
+                <LineBreak/>
+                - Click "Add Task" to create a new task with a title, description, and optional reminder date.
+                - Select a task in the list and click "Complete Task" to mark it as done.
+                - Select a task and click "Delete Task" to remove it.
+                - Reminders appear in the chat window when due.
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Theme Switching:</Run>
+                <LineBreak/>
+                - Select "light", "dark", or "blue" from the settings dropdown to change the UI theme.
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Quiz:</Run>
+                <LineBreak/>
+                - Click "Quiz" to start a cybersecurity quiz.
+                - Answer questions to earn points (+10 for correct, +5 for incorrect).
+                - Bonus points awarded based on final score.
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Tutorial:</Run>
+                <LineBreak/>
+                - Click "Tutorial" to learn about password security or phishing awareness.
+                - Follow steps to earn points (+10 for completion, +5 for attempts).
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">View Logs:</Run>
+                <LineBreak/>
+                - Click "View Logs" to see a history of your actions (e.g., tasks added, themes changed).
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Points System:</Run>
+                <LineBreak/>
+                - Earn points for interacting: +5 per message, +10/+5 for quiz answers, +10/+5 for tutorials.
+                - Points are displayed in the status bar and saved across sessions.
+                <LineBreak/><LineBreak/>
+                <Run FontWeight="Bold">Tips:</Run>
+                <LineBreak/>
+                - Your name, tasks, points, and logs are saved in userData.json.
+                - Type "time" to see the current time, or "hi" for a greeting.
+            </TextBlock>
+        </ScrollViewer>
+        <Button Grid.Row="1" Content="Close" Click="CloseButton_Click" HorizontalAlignment="Right" Margin="0,10,0,0" Width="75"/>
+    </Grid>
+</Window>
