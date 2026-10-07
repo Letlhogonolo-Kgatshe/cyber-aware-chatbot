@@ -4,7 +4,7 @@
 
 A Windows desktop app that **teaches cybersecurity through conversation**. You ask it about phishing, passwords, ransomware or 2FA, and it answers, picks up on how you're feeling, quizzes you, and tracks your progress.
 
-<!-- Add a screenshot: run the app, then save a capture as docs/screenshot.png -->
+![Cyber Aware Chatbot answering "What is phishing?" with points, interest tracking and the task panel](docs/screenshot.jpg)
 
 ## Features
 
