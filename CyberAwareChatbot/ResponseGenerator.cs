@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Media;
 
 namespace CyberAwareChatbot
@@ -65,11 +66,12 @@ namespace CyberAwareChatbot
         public string Generate(string input)
         {
             input = input.ToLower();
-            if (input.Contains("hello") || input.Contains("hi"))
+            // Match whole words: a plain Contains("hi") also matched "phishing", "this", etc.
+            if (Regex.IsMatch(input, @"\b(hello|hi)\b"))
                 return "Hi there! How can I assist you?";
             if (input.Contains("how are you"))
                 return "I'm just a bot, but I'm doing great!";
-            if (input.Contains("time"))
+            if (Regex.IsMatch(input, @"\btime\b"))
                 return $"The current time is {DateTime.Now:HH:mm} SAST.";
 
             string? keyword = FindMatchingKeyword(input);
