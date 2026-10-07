@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-and-test:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,3 +17,4 @@ jobs:
             10.0.x
       - run: dotnet restore CyberAwareChatbot.sln
       - run: dotnet build CyberAwareChatbot.sln --no-restore -c Release
+      - run: dotnet test CyberAwareChatbot.Tests --no-build -c Release --verbosity normal
