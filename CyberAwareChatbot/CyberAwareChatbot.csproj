@@ -8,10 +8,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-<ItemGroup>
-  <Resource Include="Resources\Greeting.wav" />
-</ItemGroup>
-
   <ItemGroup>
     <None Remove="Resources\Greeting.wav" />
   </ItemGroup>
@@ -21,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Greeting.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="Resources\Greeting.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
